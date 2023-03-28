@@ -21,9 +21,8 @@ pipeline {
             steps{
                 script{
                    withCredentials([string(credentialsId: 'dockerhubpwd', variable: 'dockerhubpwd')]) {
-                   sh 'docker login -u yassineKraiem -p ${dockerhubpwd}'
-
-}
+                   sh 'docker login -u krayem.yessine@gmail.com -p ${dockerhubpwd}'
+                   }
                    sh 'docker push yassinekraiem/devops-automation'
                 }
             }
